@@ -7,7 +7,7 @@
     "start": "hs ./docs -p 8080 -s -c-1 -o",
     "build": "rollup -c rollup.config.js --watch",
     "release": "rollup -c rollup.config.release.js",
-    "jsdoc": "jsdoc -c jsdoc.config.js",
+    "jsdoc": "jsdoc -c jsdoc.config.js README.md",
     "eslint": "eslint src/",
     "test": "jest --config=./jest.config.js"
   },

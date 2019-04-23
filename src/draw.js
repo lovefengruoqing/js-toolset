@@ -1,10 +1,12 @@
-/* eslint-disable no-param-reassign */
 /**
- * 提供一些绘图常用的方法
+ * @module js-toolset/draw
+ * @description 提供一些绘图常用的方法
  */
 
 /**
- * 添加线性渐变
+ * @name addLinearGradient
+ * @function
+ * @description 添加线性渐变
  * @param {Object} g canvas 2d 画笔
  * @param {Object} fPoint 起始点坐标
  * @param {Object} tPoint 终止点坐标
@@ -29,7 +31,9 @@ export const addLinearGradient = (g, fPoint, tPoint, colors = [[0, '#efefef'], [
 };
 
 /**
- * 绘制标题装饰线（小竖线）
+ * @name drawTitleDecoration
+ * @function
+ * @description 绘制标题装饰线（小竖线）
  * @param {Object} g canvas 画笔
  * @param {Object} param1 一些参数
  */
@@ -57,7 +61,9 @@ export const drawTitleDecoration = (g, {
 };
 
 /**
- * 绘制凹形的渐变线
+ * @name drawLine
+ * @function
+ * @description 绘制凹形的渐变线
  * @param {CanvasRenderingContext2D} g canvas 画笔
  * @param {Number} w 宽度
  * @param {Number} h 高度
@@ -114,7 +120,9 @@ export const drawLine = (
 };
 
 /**
- * 根据一组点来绘制
+ * @name drawLineWithArray
+ * @function
+ * @description 根据一组点来绘制
  * @param {CanvasRenderingContext2D} g canvas 画笔
  * @param {Array} array 点的数组集合
  */

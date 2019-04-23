@@ -1,27 +1,36 @@
 /**
- * JavaScript 常用的一些工具方法
+ * @module js-toolset/enhance
+ * @description JavaScript 常用方法增强
  */
 
 /**
- * 判断传入的对象是不是数组
+ * @name isArray
+ * @function
+ * @description 判断传入的对象是不是数组
  * @param {Array} o 数组
  */
 export const isArray = o => Object.prototype.toString.call(o) === '[object Array]';
 
 /**
- * 判断目标函数是不是对象
+ * @name isObject
+ * @function
+ * @description 判断目标函数是不是对象
  * @param {Object} o 对象
  */
 export const isObject = o => Object.prototype.toString.call(o) === '[object Object]';
 
 /**
- * 判断目标函数是不是字符串
+ * @name isString
+ * @function
+ * @description 判断目标函数是不是字符串
  * @param {String} o 字符串
  */
 export const isString = o => Object.prototype.toString.call(o) === '[object String]';
 
 /**
- * 判断是否为图片的路径
+ * @name isPictureSrc
+ * @function
+ * @description 判断是否为图片的路径
  * @param {String} src 字符串，图片路径
  */
 export const isPictureSrc = (src) => {
@@ -39,7 +48,9 @@ export const isPictureSrc = (src) => {
 };
 
 /**
- * 判断是不是 dom 对象
+ * @name isHTMLElement
+ * @function
+ * @description 判断是不是 dom 对象
  * @param {HTMLElement} o dom 元素
  */
 export const isHTMLElement = o => o instanceof HTMLElement;

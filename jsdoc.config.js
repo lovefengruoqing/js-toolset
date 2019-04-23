@@ -11,7 +11,10 @@ module.exports = {
     },
   },
   opts: {
-    destination: 'docs/jsdoc/',
+    destination: 'docs/',
     recurse: true,
   },
+  "plugins": [
+    "plugins/markdown"
+  ],
 };

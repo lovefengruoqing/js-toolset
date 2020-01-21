@@ -56,6 +56,32 @@ export const getDomSpecifiedPointLocation = (dom, specifiedPoint) => {
 };
 
 /**
+ * @name setLocation
+ * @description 调整组件在屏幕上的位置
+ * @function
+ * @param {HTMLElement} dom dom 元素
+ * @param {Object} {x, y} 坐标对象
+ * @param {Number} benchmark 基准点，不传，以左上角为基准点，传 0-中心，2-右上角，3-左下角，4-右下角
+ */
+export const setLocation = (dom, { x = 0, y = 0 }, benchmark) => {
+  const { style } = dom;
+  const { width: w, height: h } = dom.getBoundingClientRect();
+
+  function _set(left, top) {
+    style.left = `${left}px`;
+    style.top = `${top}px`;
+  }
+
+  switch (benchmark) {
+    case 0: _set(x - w / 2, y - h / 2); break;
+    case 2: _set(x - w, y); break;
+    case 3: _set(x, y - h); break;
+    case 4: _set(x - w, y - h); break;
+    default: _set(x, y);
+  }
+};
+
+/**
  * @name loadLibs
  * @function
  * @description 批量加载 libs 脚本
